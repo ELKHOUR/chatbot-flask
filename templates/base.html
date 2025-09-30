@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple ChatBot</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" >
+</head>
+<body>
+<!-- my code -->
+
+
+
+
+
+<div class="container">
+    <h1>ChatBot</h1>
+    <div class="texts">
+        <p class="userText">привет</p>
+
+    </div>
+<div class="parent">
+    <input name="user_input" id="userInput" type="text" placeholder="Type something..." required>
+    <button id="send" type="submit">Send</button>
+</div>
+
+
+</div>
+
+
+
+
+
+
+ <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+</body>
+</html>

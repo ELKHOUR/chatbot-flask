@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #000; /* night sky */
+  overflow: hidden;
+  position: relative;
+  color:white;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #0ff; /* blue star */
+  border-radius: 50%;
+  box-shadow: 0 0 6px #0ff, 0 0 12px #0ff;
+  opacity: 0.8;
+  animation: twinkle 2s infinite alternate, moveStars 300s linear infinite; /* VERY slow movement */
+}
+
+/* Twinkle effect */
+@keyframes twinkle {
+  0% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.5); }
+  100% { opacity: 0.5; transform: scale(1); }
+}
+
+
+
+
+.container{
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* centers horizontally */
+    justify-content: center;/* centers vertically */
+    height: 100vh;
+    text-align: center;
+    gap:50px
+}
+
+.parent input{
+    padding:8px 15px;
+    background:none;
+    color:#0ff;
+    border-color:#0ff;
+    border-radius:14px;
+    width:230px
+
+}
+.parent button{
+    padding:8px 15px;
+    background:none;
+    color:#0ff;
+    border-color:#0ff;
+    border-radius:14px;
+}
+
+.texts {
+    background: #111;       /* chat background */
+    border: 1px solid #0ff;
+    border-radius: 14px;
+    padding: 10px;
+    width: 260px;
+    height: 340px;
+    overflow-y: auto;       /* scroll if too many messages */
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;
+
+}
+
+/* Common message style */
+.texts p {
+    max-width: 80%;
+    padding: 8px 12px;
+    border-radius: 12px;
+    word-wrap: break-word;
+    font-size: 14px;
+}
+
+/* Bot messages (left) */
+.botText {
+    background: #222;
+    color: #0ff;
+    align-self: flex-end;
+    border-radius: 12px 12px 12px 0;
+}
+
+/* User messages (right) */
+.userText {
+    background: #0ff;
+    color: #000;
+    align-self: flex-start;
+    border-radius: 12px 12px 0 12px;
+}
