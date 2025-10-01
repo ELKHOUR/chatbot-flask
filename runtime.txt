@@ -1,2 +1,1 @@
-python-3.11.9
-blis-0.7.10
+python-3.9.18
